@@ -1,2 +1,8 @@
-# lab_1_robotica-2022I
-Laboratorio 1 - Robótica - 2022-I
+# Laboratorio 1 - Robótica - 2022-I
+### Integrantes
+- Nicolas Pulido Gerena
+- Santiago Sanchez
+
+## Conexión de ROS con Matlab
+
+## Script de Python
