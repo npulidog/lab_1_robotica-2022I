@@ -10,10 +10,8 @@ import termios, sys, os
 from numpy import pi
 
 
-def callback(data):
-    rospy.loginfo(data.x)
+def on_press(key):
 
-def turtlemove():
     rospy.init_node('move_turtlebot', anonymous=False)
     rospy.Subscriber("turtle1/cmd_vel", Twist, callback)
     
@@ -38,8 +36,6 @@ def turtlemove():
         if(key == Key.a):
                 vel.angular.z = -1.0
 
-
-def on_press(key):
     if key == Key.space:
     rospy.wait_for_service('/turtle1/teleport_relative')
     try:
@@ -61,3 +57,11 @@ def on_press(key):
 def on_release(key):
     if key == Key.esc:
         return False
+
+if __name__ == '__main__':
+    pubVel(0,0,0.1)
+    try:
+        with Listener(on_press=on_press, on_release=on_release) as listener:
+            listener.join()
+    except rospy.ROSInterruptException:
+        pass
