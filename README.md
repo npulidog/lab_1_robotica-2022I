@@ -15,4 +15,4 @@ Se utilizó la libreria "pynput.keyboard" para poder realizar la detección del 
 
 Para las teclas A, S, D, W, se utilizó el topico "turtle1/cmd vel" y para las teclas R y ESPACIO se utilizaron los servicios "turtle1/teleport absolute" y "turtle1/teleport relative".
 
-Adicionalmente, se añadió el script de python en el apartado de "catkin_install_python" del archivo "CMakeLists.txt"
+Adicionalmente, se akñadió el script de python en el apartado de "catkin_install_python" del archivo "CMakeLists.txt"
